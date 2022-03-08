@@ -1,8 +1,11 @@
 package com.periyar.commerce;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AlertDialogLayout;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -50,14 +53,39 @@ public class MainPage extends AppCompatActivity {
                     .show();
         }
         if (item.getItemId() == R.id.exit) {
-            finish();
-            System.exit(0);
+            //when exit menu clicked alert dialog
             Toast.makeText(getApplicationContext(),
-                    "Exiting...",
+                    "Click 'yes' to exit",
                     Toast.LENGTH_LONG)
+                    .show();
+            new AlertDialog.Builder(this)
+                    .setMessage("Are you sure want to exit???")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No", null)
                     .show();
         }
         return super.onOptionsItemSelected(item);
 
+    }
+    //when back button pressed alret dialog
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Are you sure want to exit???")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }
