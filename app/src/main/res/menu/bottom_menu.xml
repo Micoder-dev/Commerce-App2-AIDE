@@ -24,6 +24,6 @@
         android:id="@+id/profile"
         android:title="Profile"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_emoji_emotions_24"/>
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
 
 </menu>
