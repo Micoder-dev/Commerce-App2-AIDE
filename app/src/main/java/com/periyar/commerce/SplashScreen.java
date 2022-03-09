@@ -35,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
 
             }
 
-        }, 6 * 1000); // wait for 5 seconds
+        }, 7 * 1000); // wait for 5 seconds
 
 
         //splashscreen bg vid

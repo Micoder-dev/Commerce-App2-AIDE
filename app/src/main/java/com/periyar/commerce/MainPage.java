@@ -50,9 +50,6 @@ public class MainPage extends AppCompatActivity {
                         case R.id.nav_settings:
                             selectedFragment = new SettingsFragment();
                             break;
-                        case R.id.nav_profile:
-                            selectedFragment = new ProfileFragment();
-                            break;
                     }
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
