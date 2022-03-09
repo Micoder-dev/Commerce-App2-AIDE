@@ -1,5 +1,7 @@
 package com.periyar.commerce;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,6 +48,16 @@ public class SearchFragment extends Fragment {
                 return false;
             }
         });
+        if (!isConnected()){
+            Toast.makeText(getActivity(),"Check your Internet connection",Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(getActivity(),"Welcome to commerce website",Toast.LENGTH_LONG).show();
+        }
         return v;
+    }
+    private boolean isConnected(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting();
     }
 }
