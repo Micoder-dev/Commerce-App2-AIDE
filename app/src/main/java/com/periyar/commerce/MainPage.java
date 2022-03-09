@@ -46,6 +46,10 @@ public class MainPage extends AppCompatActivity {
                             break;
                         case R.id.nav_search:
                             selectedFragment = new SearchFragment();
+                            Toast.makeText(getApplicationContext(),
+                                    "Loading...",
+                                    Toast.LENGTH_LONG)
+                                    .show();
                             break;
                         case R.id.nav_settings:
                             selectedFragment = new SettingsFragment();
