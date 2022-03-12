@@ -33,6 +33,11 @@ public class MainPage extends AppCompatActivity {
         setSupportActionBar(mToolBar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        Toast.makeText(getApplicationContext(),
+                "Welcome to commerce application",
+                Toast.LENGTH_LONG)
+                .show();
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
