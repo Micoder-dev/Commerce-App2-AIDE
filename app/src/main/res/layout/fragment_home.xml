@@ -7,10 +7,21 @@
     android:orientation="vertical"
     android:background="@color/sky_blue">
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/dep"
+        android:layout_height="150dp"
+        android:src="@drawable/g2"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MASTER OF COMMERCE"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="30sp"
+        android:fontFamily="@font/organic"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"/>
 
     <HorizontalScrollView
@@ -45,7 +56,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester 1"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
                         android:textSize="20sp"
                         android:layout_marginTop="10dp"/>
 
@@ -76,7 +88,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester 2"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
                         android:textSize="20sp"
                         android:layout_marginTop="10dp"/>
 
@@ -107,7 +120,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester 3"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
                         android:textSize="20sp"
                         android:layout_marginTop="10dp"/>
 
@@ -138,7 +152,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester 4"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
                         android:textSize="20sp"
                         android:layout_marginTop="10dp"/>
 

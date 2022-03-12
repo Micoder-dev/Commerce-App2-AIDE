@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/icon"/>
+                android:src="@drawable/alogo"/>
 
             <TextView
                 android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
                 android:textSize="24sp"
                 android:text="   Commerce"
                 android:textStyle="normal|bold"
-                android:textColor="#FFFFFF"/>
+                android:textColor="@android:color/holo_orange_dark"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -48,8 +48,8 @@
         android:background="@color/teal_200"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_menu"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/holo_orange_dark"
+        app:itemTextColor="@android:color/holo_orange_dark"
         app:itemIconSize="25sp"/>
 
 

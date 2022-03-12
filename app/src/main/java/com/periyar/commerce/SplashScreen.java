@@ -10,7 +10,7 @@ import android.os.Handler;
 import android.widget.VideoView;
 
 public class SplashScreen extends AppCompatActivity {
-    VideoView videoView;
+   // VideoView videoView; //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,9 @@ public class SplashScreen extends AppCompatActivity {
 
             }
 
-        }, 7 * 1000); // wait for 5 seconds
+        }, 4 * 1000); // wait for 5 seconds
 
-
+/*--
         //splashscreen bg vid
         videoView = findViewById(R.id.videoview);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.bg_video);
@@ -78,5 +78,7 @@ public class SplashScreen extends AppCompatActivity {
     }
 
 
+--*/
+    }
 
     }
