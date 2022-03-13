@@ -7,12 +7,18 @@
     android:orientation="vertical"
     android:background="@color/sky_blue">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:src="@drawable/g2"
         android:layout_gravity="center"/>
-
 
     <TextView
         android:layout_width="400dp"
@@ -41,9 +47,11 @@
                 android:layout_width="145dp"
                 android:layout_height="135dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="50dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@color/teal_200"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -74,9 +82,11 @@
                 android:layout_width="145dp"
                 android:layout_height="135dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="50dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@color/teal_200"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -107,9 +117,11 @@
                 android:layout_width="145dp"
                 android:layout_height="135dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="50dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@color/teal_200"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -140,9 +152,11 @@
                 android:layout_width="145dp"
                 android:layout_height="135dp"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="50dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@color/teal_200"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -172,6 +186,7 @@
         </LinearLayout>
 
     </HorizontalScrollView>
+
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -188,7 +203,9 @@
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -200,11 +217,11 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/b1"/>
+                        android:src="@drawable/alogo"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester 1"
+                        android:text="Title 1"
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -221,7 +238,9 @@
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -233,11 +252,11 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/b2"/>
+                        android:src="@drawable/alogo"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester 2"
+                        android:text="Title 2"
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -254,7 +273,9 @@
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -266,11 +287,11 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/b3"/>
+                        android:src="@drawable/alogo"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester 3"
+                        android:text="Title 3"
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -287,7 +308,9 @@
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/teal_200">
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -299,11 +322,11 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/b4"/>
+                        android:src="@drawable/alogo"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester 4"
+                        android:text="Title 4"
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -317,5 +340,14 @@
         </LinearLayout>
 
     </HorizontalScrollView>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/g4"
+                android:layout_gravity="center"/>
+
+    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
