@@ -5,7 +5,94 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/g1"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our Commerce Application made by Commerce Students."
+        android:textSize="30sp"
+        android:textColor="@color/teal_200"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/heart"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/icon"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 2.0"
+                android:textSize="20sp"
+                android:textColor="@color/teal_200"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sunny"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For any help or support, please contact us by"
+                android:textSize="22sp"
+                android:textColor="@color/teal_200"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sunny"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="micoder.com@gmail.com"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/sky_blue"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
