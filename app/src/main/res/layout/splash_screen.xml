@@ -23,13 +23,16 @@
         android:src="@drawable/g"
         android:layout_centerInParent="true" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Commerce"
+        android:gravity="center"
         android:textSize="50sp"
         android:textColor="@android:color/white"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/heart"/>
+        android:fontFamily="@font/heart"
+        android:shadowColor="@color/yellow"
+        android:shadowRadius="50"/>
 
 </RelativeLayout>

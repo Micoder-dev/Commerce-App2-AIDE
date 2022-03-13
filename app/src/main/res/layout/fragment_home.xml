@@ -15,14 +15,17 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:text="MASTER OF COMMERCE"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/yellow"
         android:textSize="30sp"
         android:fontFamily="@font/organic"
         android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="50"/>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -35,12 +38,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSem1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/black">
+                android:backgroundTint="@color/teal_200">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -60,7 +63,7 @@
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="1dp"/>
 
                 </LinearLayout>
 
@@ -68,12 +71,12 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSem2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/black">
+                android:backgroundTint="@color/teal_200">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -93,7 +96,7 @@
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="1dp"/>
 
                 </LinearLayout>
 
@@ -101,12 +104,12 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSem3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/black">
+                android:backgroundTint="@color/teal_200">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -126,7 +129,7 @@
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="1dp"/>
 
                 </LinearLayout>
 
@@ -134,12 +137,12 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSem4"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:backgroundTint="@color/black">
+                android:backgroundTint="@color/teal_200">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -159,7 +162,152 @@
                         android:fontFamily="@font/sunny"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="1dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:backgroundTint="@color/teal_200">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/b1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semester 1"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp"
+                        android:layout_marginTop="1dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:backgroundTint="@color/teal_200">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/b2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semester 2"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp"
+                        android:layout_marginTop="1dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:backgroundTint="@color/teal_200">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/b3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semester 3"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp"
+                        android:layout_marginTop="1dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="145dp"
+                android:layout_height="135dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:backgroundTint="@color/teal_200">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/b4"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semester 4"
+                        android:fontFamily="@font/sunny"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp"
+                        android:layout_marginTop="1dp"/>
 
                 </LinearLayout>
 

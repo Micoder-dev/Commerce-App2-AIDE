@@ -3,7 +3,6 @@ package com.periyar.commerce;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AlertDialogLayout;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
@@ -50,10 +49,10 @@ public class MainPage extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.nav_search:
-                            selectedFragment = new SearchFragment();
+                            selectedFragment = new WebFragment();
                             break;
                         case R.id.nav_settings:
-                            selectedFragment = new SettingsFragment();
+                            selectedFragment = new InfoFragment();
                             break;
                     }
 
