@@ -40,49 +40,68 @@
         android:textColor="@color/black"
         android:layout_gravity="center"
         style="@style/btn_style"
-        android:theme="@style/btn_style"/>
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     <Button
         android:drawableLeft="@drawable/layer_list"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:text="International Business"
         android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        style="@style/btn_style"
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     <Button
         android:drawableLeft="@drawable/layer_list"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:text="Insurance And Risk Management"
         android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        style="@style/btn_style"
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     <Button
         android:drawableLeft="@drawable/layer_list"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:text="Financial Institutions And Markets"
         android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        style="@style/btn_style"
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     <Button
         android:drawableLeft="@drawable/layer_list"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:text="Advanced Financial Accounting"
         android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        style="@style/btn_style"
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     <Button
         android:drawableLeft="@drawable/layer_list"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:text="Organizational Behaviour"
         android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        style="@style/btn_style"
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     <Button
         android:drawableLeft="@drawable/layer_list"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:text="Consumer Rights And Education"
         android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        style="@style/btn_style"
+        android:theme="@style/btn_style"
+        android:layout_marginTop="5dp"/>
     </LinearLayout>
     </ScrollView>
 </LinearLayout>
