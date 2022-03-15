@@ -4,15 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GoogleLogin">
+    tools:context=".GoogleLogin"
+    android:background="@color/sky_blue">
+
+    <ImageView
+        android:id="@+id/googleLoginImg"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/alogo"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"/>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/btn_style"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="300dp"/>
+        android:layout_marginBottom="150dp"
+        app:colorScheme="dark"/>
 
 
 </RelativeLayout>
