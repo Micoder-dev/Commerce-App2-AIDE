@@ -6,8 +6,8 @@
         android:title="About"/>
 
     <item
-        android:id="@+id/help"
-        android:title="Help"/>
+        android:id="@+id/logout"
+        android:title="LogOut"/>
 
     <item
         android:id="@+id/settings"

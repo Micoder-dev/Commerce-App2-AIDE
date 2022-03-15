@@ -17,9 +17,9 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/profile_image"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/alogo"/>
+                android:layout_height="50dp" />
 
             <TextView
                 android:layout_height="wrap_content"

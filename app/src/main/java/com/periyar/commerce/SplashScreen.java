@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
 
             public void run() {
 
-                Intent i = new Intent(SplashScreen.this, MainPage.class);
+                Intent i = new Intent(SplashScreen.this, GoogleLogin.class);
 
                 startActivity(i);
 

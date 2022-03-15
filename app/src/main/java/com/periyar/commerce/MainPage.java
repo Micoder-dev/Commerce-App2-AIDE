@@ -7,15 +7,32 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.OptionalPendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.squareup.picasso.Picasso;
 
-public class MainPage extends AppCompatActivity {
+public class MainPage extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private Toolbar mToolBar;
+    private ImageView profile_image;
+
+    private GoogleApiClient googleApiClient;
+    private GoogleSignInOptions gso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +53,13 @@ public class MainPage extends AppCompatActivity {
                 "Welcome to commerce application",
                 Toast.LENGTH_LONG)
                 .show();
+
+        profile_image=findViewById(R.id.profile_image);
+
+        gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+
+        googleApiClient=new GoogleApiClient.Builder(this).enableAutoManage(this,this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso).build();
 
     }
 
@@ -78,11 +102,21 @@ public class MainPage extends AppCompatActivity {
                     Toast.LENGTH_LONG)
                     .show();
         }
-        if (item.getItemId() == R.id.help) {
+        if (item.getItemId() == R.id.logout) {
             Toast.makeText(getApplicationContext(),
-                    "Help clicked",
+                    "Logouted...",
                     Toast.LENGTH_LONG)
                     .show();
+
+            Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+                @Override
+                public void onResult(@NonNull Status status) {
+                    if (status.isSuccess())
+                        gotoGoogleLogin();
+                    else
+                        Toast.makeText(MainPage.this, "Logout error!", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
         if (item.getItemId() == R.id.settings) {
             Toast.makeText(getApplicationContext(),
@@ -111,6 +145,13 @@ public class MainPage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
+    private void gotoGoogleLogin() {
+
+        startActivity(new Intent(MainPage.this,GoogleLogin.class));
+        finish();
+    }
+
     //when back button pressed alret dialog
     @Override
     public void onBackPressed() {
@@ -128,4 +169,36 @@ public class MainPage extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+    private void handleSignInResult (GoogleSignInResult result){
+        if (result.isSuccess()){
+            GoogleSignInAccount account=result.getSignInAccount();
+
+            Picasso.get().load(account.getPhotoUrl()).placeholder(R.drawable.icon).into(profile_image);
+        }else {
+            gotoGoogleLogin();
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        OptionalPendingResult<GoogleSignInResult> opr=Auth.GoogleSignInApi.silentSignIn(googleApiClient);
+        if (opr.isDone()){
+            GoogleSignInResult result=opr.get();
+            handleSignInResult(result);
+        }else {
+            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
+                @Override
+                public void onResult(@NonNull GoogleSignInResult result) {
+                    handleSignInResult(result);
+                }
+            });
+        }
+    }
 }
