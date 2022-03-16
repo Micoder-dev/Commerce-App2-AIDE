@@ -123,6 +123,8 @@ public class MainPage extends AppCompatActivity implements GoogleApiClient.OnCon
                     "Settings clicked",
                     Toast.LENGTH_LONG)
                     .show();
+            Intent intent=new Intent(MainPage.this,Settings.class);
+            startActivity(intent);
         }
         if (item.getItemId() == R.id.exit) {
             //when exit menu clicked alert dialog

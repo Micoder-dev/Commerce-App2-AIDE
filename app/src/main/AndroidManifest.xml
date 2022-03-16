@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Commerce">
         <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
             android:name=".GoogleLogin"
             android:exported="false" />
         <activity
