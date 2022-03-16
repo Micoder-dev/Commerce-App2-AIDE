@@ -58,7 +58,7 @@ public class GoogleLogin extends AppCompatActivity implements GoogleApiClient.On
                 startActivity(new Intent(GoogleLogin.this,MainPage.class));
                 finish();
             }else {
-                Toast.makeText(this, "Login Faied...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Login Faied, Check your internet connection...", Toast.LENGTH_SHORT).show();
             }
         }
     }

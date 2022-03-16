@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/orange"
     android:orientation="vertical">
 
     <ScrollView
@@ -14,13 +14,13 @@
             android:orientation="vertical">
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:src="@drawable/g1"
         android:layout_gravity="center"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to our Commerce Application made by Commerce Students."
+        android:text="Welcome to our Commerce Application developed by Commerce Students."
         android:textSize="30sp"
         android:textColor="@color/teal_200"
         android:gravity="center"
@@ -33,17 +33,26 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_settings1"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/icon"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
             <TextView
+                android:id="@+id/profile_name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Version 2.0"
+                android:textSize="20sp"
+                android:textColor="@color/teal_200"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sunny"/>
+            <TextView
+                android:id="@+id/profile_email1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="@color/teal_200"
                 android:layout_gravity="center"
@@ -63,11 +72,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="For any help or support, please contact us by"
-                android:textSize="22sp"
-                android:textColor="@color/teal_200"
-                android:layout_gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/sunny"/>
+                android:layout_marginLeft="5dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,6 +98,16 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp" />
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sunny"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                style="@style/btn_style1"/>
 
         </LinearLayout>
     </ScrollView>

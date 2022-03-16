@@ -27,9 +27,11 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MainPage extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private Toolbar mToolBar;
-    private ImageView profile_image;
+    private CircleImageView profile_image;
 
     private GoogleApiClient googleApiClient;
     private GoogleSignInOptions gso;
