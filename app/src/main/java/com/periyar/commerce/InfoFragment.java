@@ -1,5 +1,6 @@
 package com.periyar.commerce;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -55,20 +57,32 @@ public class InfoFragment extends Fragment implements GoogleApiClient.OnConnecti
         logout_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity().getApplicationContext(),
-                        "Logouted...",
-                        Toast.LENGTH_LONG)
-                        .show();
 
-                Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(@NonNull Status status) {
-                        if (status.isSuccess())
-                            gotoGoogleLogin();
-                        else
-                            Toast.makeText(getActivity(), "Logout error!", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
+                alert.setMessage("Are you sure want to Logout!")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+                                    @Override
+                                    public void onResult(@NonNull Status status) {
+                                        if (status.isSuccess()) {
+                                            gotoGoogleLogin();
+                                            Toast.makeText(getContext(),
+                                                    "Logouted...",
+                                                    Toast.LENGTH_LONG)
+                                                    .show();
+                                        }
+                                        else {
+                                            Toast.makeText(getActivity(), "Logout error!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                            }
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
             }
         });
 

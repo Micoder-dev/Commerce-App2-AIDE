@@ -105,20 +105,32 @@ public class MainPage extends AppCompatActivity implements GoogleApiClient.OnCon
                     .show();
         }
         if (item.getItemId() == R.id.logout) {
-            Toast.makeText(getApplicationContext(),
-                    "Logouted...",
-                    Toast.LENGTH_LONG)
+            new AlertDialog.Builder(this)
+                    .setMessage("Are you sure want to Logout!")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+                                @Override
+                                public void onResult(@NonNull Status status) {
+                                    if (status.isSuccess()) {
+                                        gotoGoogleLogin();
+                                        Toast.makeText(getApplicationContext(),
+                                                "Logouted...",
+                                                Toast.LENGTH_LONG)
+                                                .show();
+                                    }
+                                    else {
+                                        Toast.makeText(MainPage.this, "Logout error!", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                        }
+                    })
+                    .setNegativeButton("No", null)
                     .show();
 
-            Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
-                @Override
-                public void onResult(@NonNull Status status) {
-                    if (status.isSuccess())
-                        gotoGoogleLogin();
-                    else
-                        Toast.makeText(MainPage.this, "Logout error!", Toast.LENGTH_SHORT).show();
-                }
-            });
         }
         if (item.getItemId() == R.id.settings) {
             Toast.makeText(getApplicationContext(),
@@ -132,7 +144,7 @@ public class MainPage extends AppCompatActivity implements GoogleApiClient.OnCon
             //when exit menu clicked alert dialog
             Toast.makeText(getApplicationContext(),
                     "Click 'yes' to exit",
-                    Toast.LENGTH_LONG)
+                    Toast.LENGTH_SHORT)
                     .show();
             new AlertDialog.Builder(this)
                     .setMessage("Are you sure want to exit???")

@@ -6,12 +6,12 @@
         android:title="About"/>
 
     <item
-        android:id="@+id/logout"
-        android:title="LogOut"/>
-
-    <item
         android:id="@+id/settings"
         android:title="Settings"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"/>
 
     <item
         android:id="@+id/exit"

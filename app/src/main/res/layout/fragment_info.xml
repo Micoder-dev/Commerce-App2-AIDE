@@ -87,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="micoder.com@gmail.com"
+                android:autoLink="email"
                 android:textStyle="bold"
                 android:textSize="15dp"
                 android:layout_marginLeft="30dp"
