@@ -3,7 +3,8 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdkVersion 32
+    buildToolsVersion "32.1.0-rc1"
 
     defaultConfig {
         applicationId "com.periyar.commerce"
@@ -14,6 +15,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    
 
     buildTypes {
         release {
