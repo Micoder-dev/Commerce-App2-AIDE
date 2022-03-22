@@ -16,25 +16,25 @@
         android:theme="@style/Theme.Commerce">
         <activity
             android:name=".Settings"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".GoogleLogin"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Sem4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Sem3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Sem2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Sem1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
